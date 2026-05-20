@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodda Sriram | SAP ABAP Consultant Portfolio</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Orbitron (Headings) and Rajdhani (Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#070310',
+                            card: '#120822',
+                            primary: '#b061ff',
+                            secondary: '#7e22ce',
+                            accent: '#e9d5ff'
+                        }
+                    },
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        rajdhani: ['Rajdhani', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #070310;
+            color: #e9d5ff;
+            font-family: 'Rajdhani', sans-serif;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(126, 34, 206, 0.08), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(126, 34, 206, 0.08), transparent 25%);
+        }
+
+        .neon-text {
+            text-shadow: 0 0 10px rgba(176, 97, 255, 0.5), 0 0 20px rgba(176, 97, 255, 0.3);
+        }
+
+        .neon-border {
+            box-shadow: 0 0 10px rgba(176, 97, 255, 0.2), inset 0 0 10px rgba(176, 97, 255, 0.1);
+        }
+
+        .bracket-frame {
+            position: relative;
+            padding: 10px;
+        }
+        
+        .bracket-frame::before, .bracket-frame::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #b061ff;
+            transition: all 0.3s ease;
+        }
+
+        .bracket-frame::before {
+            top: 0; left: 0;
+            border-right: none; border-bottom: none;
+        }
+        .bracket-frame::after {
+            bottom: 0; right: 0;
+            border-left: none; border-top: none;
+        }
+
+        .bracket-frame:hover::before, .bracket-frame:hover::after {
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+        }
+
+        .section-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            color: #b061ff;
+            letter-spacing: 2px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #070310; }
+        ::-webkit-scrollbar-thumb { background: #7e22ce; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #b061ff; }
+        
+        input, textarea {
+            background-color: #120822 !important;
+            border-color: #3b1663 !important;
+            color: #e9d5ff !important;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #b061ff !important;
+            box-shadow: 0 0 5px rgba(176, 97, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-cyber-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-cyber-bg/90 backdrop-blur-md border-b border-cyber-secondary/30">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- LOGO: DS for Dodda Sriram -->
+            <a href="#" class="font-orbitron font-bold text-2xl text-cyber-primary neon-text tracking-widest">
+                DS
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-orbitron text-xs tracking-[0.2em] text-gray-400">
+                <a href="#about" class="hover:text-cyber-primary transition-colors">ABOUT</a>
+                <a href="#skills" class="hover:text-cyber-primary transition-colors">SKILLS</a>
+                <a href="#experience" class="hover:text-cyber-primary transition-colors">EXPERIENCE</a>
+                <a href="#achievements" class="hover:text-cyber-primary transition-colors">ACHIEVEMENTS</a>
+                <a href="#contact" class="hover:text-cyber-primary transition-colors">CONTACT</a>
+            </div>
+
+            <div class="flex items-center space-x-2">
+                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_#22c55e]"></div>
+                <span class="font-orbitron text-xs tracking-widest text-gray-500">online</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20 space-y-32">
+
+        <!-- 01 HERO SECTION -->
+        <section id="about" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[70vh]">
+            <div class="space-y-6">
+                <!-- Job Title -->
+                <div class="font-orbitron text-cyber-primary text-sm tracking-widest flex items-center gap-2">
+                    <span class="text-lg">></span> SAP ABAP CONSULTANT @ IBM
+                </div>
+                
+                <!-- Name -->
+                <h1 class="font-orbitron text-3xl md:text-4xl font-bold text-white neon-text uppercase tracking-wide">
+                    Dodda Sriram
+                </h1>
+                
+                <!-- Description -->
+                <p class="text-gray-400 text-lg max-w-lg leading-relaxed">
+                    SAP ABAP Consultant at IBM with 4+ years of hands-on experience in S/4HANA implementations, system conversions, and large-scale production support. Specialized in advanced ABAP development to deliver clean, scalable, and high‑performance solutions. Known for optimizing business processes, driving technical innovation, and ensuring stable enterprise operations.
+                </p>
+
+                <!-- Expanded Skill Tags -->
+                <div class="flex flex-wrap gap-2.5 pt-4 max-w-xl">
+                    <span class="px-3 py-1 border border-cyber-secondary/50 rounded bg-cyber-secondary/10 text-sm tracking-wider">RAP</span>
+                    <span class="px-3 py-1 border border-cyber-secondary/50 rounded bg-cyber-secondary/10 text-sm tracking-wider">CDS Views</span>
+                    <span class="px-3 py-1 border border-cyber-secondary/50 rounded bg-cyber-secondary/10 text-sm tracking-wider">OOPS ABAP</span>
+                    <span class="px-3 py-1 border border-cyber-secondary/50 rounded bg-cyber-secondary/10 text-sm tracking-wider">Joule AI</span>
+                    <span class="px-3 py-1 border border-cyber-secondary/50 rounded bg-cyber-secondary/10 text-sm tracking-wider">Enhancements</span>
+                    <span class="px-3 py-1 border border-cyber-secondary/50 rounded bg-cyber-secondary/10 text-sm tracking-wider">Debugging</span>
+                    <span class="px-3 py-1 border border-cyber-secondary/50 rounded bg-cyber-secondary/10 text-sm tracking-wider">Adobe Forms</span>
+                    <span class="px-3 py-1 border border-cyber-secondary/50 rounded bg-cyber-secondary/10 text-sm tracking-wider">Modern ABAP Syntax</span>
+                </div>
+
+                <div class="flex gap-4 pt-6">
+                    <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-cyber-secondary to-cyber-primary text-white font-orbitron text-sm tracking-widest rounded shadow-[0_0_15px_rgba(176,97,255,0.4)] hover:shadow-[0_0_25px_rgba(176,97,255,0.6)] transition-all">
+                        <i class="fa-solid fa-bolt mr-2"></i> Contact Me
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="px-8 py-3 border border-cyber-secondary text-cyber-accent font-orbitron text-sm tracking-widest rounded hover:bg-cyber-secondary/20 transition-all">
+                        <i class="fa-solid fa-briefcase mr-2"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Image Area -->
+            <div class="flex justify-center md:justify-end">
+                <div class="bracket-frame p-2">
+                    <!-- Your professional photo source updated -->
+                    <img src="profile.png" 
+                         alt="Dodda Sriram" 
+                         class="w-72 h-[400px] object-cover hover:scale-105 transition-all duration-500 border border-cyber-secondary/30">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 02 TECH ARSENAL -->
+        <section id="skills" class="space-y-12">
+            <div class="flex items-center gap-4">
+                <span class="section-number">02</span>
+                <h2 class="font-orbitron text-3xl font-bold uppercase tracking-wider text-white">Tech Arsenal</h2>
+                <div class="h-[1px] flex-1 bg-gradient-to-r from-cyber-secondary/50 to-transparent ml-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="bg-cyber-card border border-cyber-secondary/20 p-6 rounded hover:border-cyber-primary/50 transition-colors neon-border">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i class="fa-solid fa-cloud-bolt text-cyan-400 text-xl w-6"></i>
+                        <span class="font-bold text-lg tracking-wide">(RAP) – Managed Scenarios, CDS Views & DDIC</span>
+                    </div>
+                    <div class="h-1 w-full bg-gray-800 rounded">
+                        <div class="h-full bg-cyber-primary rounded w-[90%] shadow-[0_0_10px_#b061ff]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="bg-cyber-card border border-cyber-secondary/20 p-6 rounded hover:border-cyber-primary/50 transition-colors neon-border">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i class="fa-solid fa-cubes text-purple-400 text-xl w-6"></i>
+                        <span class="font-bold text-lg tracking-wide">Object-Oriented Programming (OOPs ABAP) & Modern Syntax</span>
+                    </div>
+                    <div class="h-1 w-full bg-gray-800 rounded">
+                        <div class="h-full bg-cyber-primary rounded w-[95%] shadow-[0_0_10px_#b061ff]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="bg-cyber-card border border-cyber-secondary/20 p-6 rounded hover:border-cyber-primary/50 transition-colors neon-border">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i class="fa-solid fa-robot text-pink-400 text-xl w-6"></i>
+                        <span class="font-bold text-lg tracking-wide">AI‑assisted Productivity (Joule AI, GenAI)</span>
+                    </div>
+                    <div class="h-1 w-full bg-gray-800 rounded">
+                        <div class="h-full bg-cyber-primary rounded w-[85%] shadow-[0_0_10px_#b061ff]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="bg-cyber-card border border-cyber-secondary/20 p-6 rounded hover:border-cyber-primary/50 transition-colors neon-border">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i class="fa-solid fa-wand-magic-sparkles text-amber-400 text-xl w-6"></i>
+                        <span class="font-bold text-lg tracking-wide">Enhancements (BAdIs, User Exits, BTEs)</span>
+                    </div>
+                    <div class="h-1 w-full bg-gray-800 rounded">
+                        <div class="h-full bg-cyber-primary rounded w-[90%] shadow-[0_0_10px_#b061ff]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 5 -->
+                <div class="bg-cyber-card border border-cyber-secondary/20 p-6 rounded hover:border-cyber-primary/50 transition-colors neon-border">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i class="fa-solid fa-file-invoice text-green-400 text-xl w-6"></i>
+                        <span class="font-bold text-lg tracking-wide">Adobe Forms (Interactive)</span>
+                    </div>
+                    <div class="h-1 w-full bg-gray-800 rounded">
+                        <div class="h-full bg-cyber-primary rounded w-[85%] shadow-[0_0_10px_#b061ff]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 6 -->
+                <div class="bg-cyber-card border border-cyber-secondary/20 p-6 rounded hover:border-cyber-primary/50 transition-colors neon-border">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i class="fa-solid fa-bug-slash text-blue-400 text-xl w-6"></i>
+                        <span class="font-bold text-lg tracking-wide">Reports, Debugging & Troubleshooting</span>
+                    </div>
+                    <div class="h-1 w-full bg-gray-800 rounded">
+                        <div class="h-full bg-cyber-primary rounded w-[92%] shadow-[0_0_10px_#b061ff]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 03 MISSION LOG (EXPERIENCE) -->
+        <section id="experience" class="space-y-12">
+            <div class="flex items-center gap-4">
+                <span class="section-number">03</span>
+                <h2 class="font-orbitron text-3xl font-bold uppercase tracking-wider text-white">Mission Log</h2>
+                <div class="h-[1px] flex-1 bg-gradient-to-r from-cyber-secondary/50 to-transparent ml-4"></div>
+            </div>
+
+            <div class="space-y-12 relative pl-8 border-l-2 border-cyber-secondary">
+                
+                <!-- Timeline item 1: Implementation (PepsiCo Project) -->
+                <div class="relative">
+                    <div class="absolute w-4 h-4 rounded-full bg-cyber-primary shadow-[0_0_10px_#b061ff] -left-[41px] top-1"></div>
+                    <div class="bg-cyber-card border border-cyber-secondary/20 p-8 rounded neon-border">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-6 gap-4">
+                            <div>
+                                <h3 class="font-orbitron text-cyber-primary text-lg tracking-widest uppercase">IBM</h3>
+                                <h4 class="text-2xl font-bold text-white mt-1">SAP ABAP Consultant - Implementation Specialist (PepsiCo Project)</h4>
+                            </div>
+                            <div class="px-4 py-1 border border-gray-600 rounded text-sm tracking-widest font-orbitron text-gray-400">
+                                2 YEARS PARALLEL TIMELINE
+                            </div>
+                        </div>
+
+                        <ul class="space-y-4 text-gray-400 text-lg">
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1 animate-pulse"></i>
+                                <p>Implemented end-to-end database models, relational structures, and data consistency frameworks through DDIC design, table enhancements, and custom entity modeling.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Designed and delivered interactive and analytical reports (including ALV, classical, and OO-based reporting), significantly improving visibility for operational and business groups.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Built customized enhancements using BAdIs, User Exits, BTEs, and the Enhancement Framework to seamless integrate business requirements into the standard SAP processes.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Created and enhanced Adobe Forms for critical business documents, customer invoices, delivery outputs, and production sheets as part of key rollouts.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Developed performance-optimized ABAP logic leveraging modern ABAP syntax, inline declarations, and constructor expressions to process data loads with low latency.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Delivered medium-level RESTful Application Programming (RAP) applications focusing on Managed Scenarios, behavior definitions, service bindings, and modular entities.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Developed optimized Core Data Services (CDS) entities, including association-driven models used directly for Fiori dashboards, reporting engines, and API layers.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline item 2: Conversion and Support -->
+                <div class="relative">
+                    <div class="absolute w-4 h-4 rounded-full bg-cyber-primary shadow-[0_0_10px_#b061ff] -left-[41px] top-1"></div>
+                    <div class="bg-cyber-card border border-cyber-secondary/20 p-8 rounded neon-border">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-6 gap-4">
+                            <div>
+                                <h3 class="font-orbitron text-cyber-primary text-lg tracking-widest uppercase">IBM</h3>
+                                <h4 class="text-2xl font-bold text-white mt-1">SAP ABAP Consultant - Conversion & Support Specialist</h4>
+                            </div>
+                            <div class="px-4 py-1 border border-gray-600 rounded text-sm tracking-widest font-orbitron text-gray-400">
+                                2 YEARS PARALLEL TIMELINE
+                            </div>
+                        </div>
+
+                        <ul class="space-y-4 text-gray-400 text-lg">
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1 animate-pulse"></i>
+                                <p>Ensured seamless transport management, retrofit handling, and dual-landscape sync support across ECC to S/4HANA parallel tracks.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Implemented systematic performance improvements in converted programs utilizing SQL Monitor, SAT/SE30 profiling, and index-based data-access tuning.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Delivered high-priority 24/7 Hypercare and Go-Live support, executing detailed root-cause analysis and resolving critical production incidents under minimal turn-around windows.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Analyzed, migrated, and optimized legacy custom ABAP code with modern ABAP expressions (7.4+ syntax), remediating obsolete components for full HANA compatibility.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Debugged, diagnosed, and resolved deep-seated technical and functional defects in both custom and standard SAP systems during system conversions.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Collaborated closely with functional consultants to analyze the impact of SAP Simplification List items and adapt the custom code footprint accordingly.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Created, enhanced, and remediated custom interfaces, critical reporting assets, and interactive print layouts utilizing Adobe Forms as part of remediation scope.</p>
+                            </li>
+                            <li class="flex gap-3">
+                                <i class="fa-solid fa-caret-right text-cyber-primary mt-1"></i>
+                                <p>Implemented CDS views and AMDP methods to achieve optimized, HANA-native, code-to-data-driven access layers.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 04 ACHIEVEMENTS -->
+        <section id="achievements" class="space-y-12">
+            <div class="flex items-center gap-4">
+                <span class="section-number">04</span>
+                <h2 class="font-orbitron text-3xl font-bold uppercase tracking-wider text-white">Unlocked Achievements</h2>
+                <div class="h-[1px] flex-1 bg-gradient-to-r from-cyber-secondary/50 to-transparent ml-4"></div>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Highlight Achievement (IBM Connected Core) -->
+                <div class="bg-gradient-to-r from-[#2a1b0a] to-cyber-card border border-yellow-600/30 p-6 rounded flex items-center gap-6 shadow-[0_0_15px_rgba(202,138,4,0.1)]">
+                    <div class="text-4xl text-yellow-500 drop-shadow-[0_0_10px_rgba(234,179,8,0.8)]">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-orbitron font-bold text-yellow-500 text-xl tracking-wider mb-1">IBM CONNECTED CORE – CERTIFICATES OF ACHIEVEMENT</h3>
+                        <p class="text-yellow-600/80">Recognized for key contributions to the "Connected Core" program during the AOA Go-Live (the world's largest S/4HANA Cloud Private edition technology upgrade) and distinguished excellence in Custom Code remediation activities during I2L remediation.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- SAP Certified ABAP Cloud -->
+                    <div class="bg-cyber-card border border-cyber-secondary/20 p-6 rounded neon-border">
+                        <div class="w-10 h-10 bg-green-500/20 flex items-center justify-center rounded mb-4 border border-green-500/50 shadow-[0_0_10px_rgba(34,197,94,0.3)]">
+                            <i class="fa-solid fa-certificate text-green-400"></i>
+                        </div>
+                        <h3 class="font-orbitron font-bold text-cyber-primary tracking-wider mb-2">SAP CERTIFIED - BACK-END DEVELOPER - ABAP CLOUD</h3>
+                        <p class="text-gray-400">Official SAP credential validating proficiency in ABAP Cloud development, RESTful Application Programming (RAP), extensibility models, and developer guidelines on SAP BTP.</p>
+                    </div>
+
+                    <!-- SAP Certified ABAP HANA -->
+                    <div class="bg-cyber-card border border-cyber-secondary/20 p-6 rounded neon-border">
+                        <div class="w-10 h-10 bg-orange-500/20 flex items-center justify-center rounded mb-4 border border-orange-500/50 shadow-[0_0_10px_rgba(249,115,22,0.3)]">
+                            <i class="fa-solid fa-award text-orange-400"></i>
+                        </div>
+                        <h3 class="font-orbitron font-bold text-cyber-primary tracking-wider mb-2">SAP CERTIFIED DEVELOPMENT SPECIALIST - ABAP FOR SAP HANA 2.0</h3>
+                        <p class="text-gray-400">Professional SAP certification validating in-depth technical expertise in building performance-optimized database structures, CDS Views, and advanced database integration on SAP HANA platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 06 ESTABLISH LINK (CONTACT) -->
+        <section id="contact" class="space-y-12">
+            <div class="flex items-center gap-4">
+                <span class="section-number">06</span>
+                <h2 class="font-orbitron text-3xl font-bold uppercase tracking-wider text-white">Establish Link</h2>
+                <div class="h-[1px] flex-1 bg-gradient-to-r from-cyber-secondary/50 to-transparent ml-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Left: Contact Details -->
+                <div class="space-y-4">
+                    <div class="bg-cyber-card border border-cyber-secondary/20 p-5 rounded flex items-center gap-6">
+                        <div class="text-2xl text-blue-300 w-8"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <div class="font-orbitron text-xs tracking-[0.2em] text-cyber-primary mb-1">PHONE</div>
+                            <div class="text-gray-300">9866054855</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cyber-card border border-cyber-secondary/20 p-5 rounded flex items-center gap-6">
+                        <div class="text-2xl text-amber-600 w-8"><i class="fa-solid fa-at"></i></div>
+                        <div>
+                            <div class="font-orbitron text-xs tracking-[0.2em] text-cyber-primary mb-1">EMAIL</div>
+                            <div class="text-gray-300">doddasrirambvc@gmail.com</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cyber-card border border-cyber-secondary/20 p-5 rounded flex items-center gap-6">
+                        <div class="text-2xl text-pink-500 w-8"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <div class="font-orbitron text-xs tracking-[0.2em] text-cyber-primary mb-1">LOCATION</div>
+                            <div class="text-gray-300">Hyderabad, Telangana, India</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cyber-card border border-cyber-secondary/20 p-5 rounded flex items-center gap-6">
+                        <div class="text-2xl text-cyan-400 w-8"><i class="fa-solid fa-globe"></i></div>
+                        <div>
+                            <div class="font-orbitron text-xs tracking-[0.2em] text-cyber-primary mb-1">LANGUAGES</div>
+                            <div class="text-gray-300">Telugu (Native) · English (Professional) · Hindi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="bg-cyber-card border border-cyber-secondary/20 p-8 rounded neon-border">
+                    <h3 class="font-orbitron text-xl text-cyber-primary tracking-widest mb-6">// SEND MESSAGE</h3>
+                    
+                    <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="font-orbitron text-xs tracking-widest text-gray-400">YOUR NAME</label>
+                                <input type="text" name="name" required class="w-full bg-transparent border rounded p-3 text-sm focus:border-cyber-primary transition-colors" placeholder="John Doe">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-orbitron text-xs tracking-widest text-gray-400">YOUR EMAIL</label>
+                                <input type="email" name="email" required class="w-full bg-transparent border rounded p-3 text-sm focus:border-cyber-primary transition-colors" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label class="font-orbitron text-xs tracking-widest text-gray-400">SUBJECT</label>
+                            <input type="text" name="subject" class="w-full bg-transparent border rounded p-3 text-sm focus:border-cyber-primary transition-colors" placeholder="Job Opportunity / SAP Project Integration">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="font-orbitron text-xs tracking-widest text-gray-400">MESSAGE</label>
+                            <textarea name="message" rows="4" required class="w-full bg-transparent border rounded p-3 text-sm focus:border-cyber-primary transition-colors" placeholder="Type your message details here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-cyber-secondary/20 border border-cyber-primary text-cyber-primary font-orbitron tracking-widest rounded hover:bg-cyber-primary hover:text-white transition-all shadow-[0_0_10px_rgba(176,97,255,0.2)]">
+                            INITIALIZE TRANSFER <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-cyber-secondary/30 mt-20">
+        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 font-orbitron text-xs tracking-widest">
+                © 2026 DODDA SRIRAM. ALL RIGHTS RESERVED.
+            </p>
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-cyber-primary hover:border-cyber-primary transition-colors">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-cyber-primary hover:border-cyber-primary transition-colors">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
